@@ -1,0 +1,70 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/demichie/elicipy2:
+      branch: main
+      repo: https://github.com/demichie/elicipy2
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/demichie/elicipy2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-azure-coyote.sh
+        container: qc.acc_ready-vermilion-chamois
+  QC.Doc:
+    repos:
+      github.com/demichie/elicipy2 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-amaranth-bee.sh
+        container: qc.doc_skanky-sapphire-newfoundland
+      github.com/demichie/elicipy2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-tan-hyrax.sh
+        container: qc.doc_nerdy-grey-eagle
+      github.com/demichie/elicipy2 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-taupe-lion.sh
+        container: qc.doc_geeky-beige-wolfhound
+  QC.Lic:
+    repos:
+      github.com/demichie/elicipy2 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-eggplant-worm.sh
+        container: qc.lic_wimpy-turquoise-wallaby
+  QC.Met:
+    repos:
+      github.com/demichie/elicipy2 cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-red-wolfhound.sh
+        container: qc.met_surly-purple-retriever
+  QC.Sec:
+    repos:
+      github.com/demichie/elicipy2 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-ruby-baboon.sh
+        container: qc.sec_fuzzy-purple-angora
+  QC.Sty:
+    repos:
+      github.com/demichie/elicipy2 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-pumpkin-blue.sh
+        container: qc.sty_chewy-asparagus-octopus
+  QC.Uni:
+    repos:
+      github.com/demichie/elicipy2 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-ochre-dugong.sh
+        container: qc.uni_snippy-firebrick-labradoodle
+  QC.Ver:
+    repos:
+      github.com/demichie/elicipy2 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-tangerine-dogfish.sh
+        container: qc.ver_flimsy-rust-argentino
+timeout: 5400
