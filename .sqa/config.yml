@@ -15,56 +15,56 @@ sqa_criteria:
     repos:
       github.com/demichie/elicipy2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-mustard-fly.sh
-        container: qc.acc_cloudy-lavender-gharial
+        - /usr/bin/env sh .sqa/script.muggy-plum-dollar.sh
+        container: qc.acc_sleepy-silver-seal
   QC.Doc:
     repos:
       github.com/demichie/elicipy2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-mustard-molly.sh
-        container: qc.doc_woolly-cobalt-dragonfly
+        - /usr/bin/env sh .sqa/script.snazzy-wisteria-blue.sh
+        container: qc.doc_scaly-tangerine-mammoth
       github.com/demichie/elicipy2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-eggplant-barnacle.sh
-        container: qc.doc_woozy-ultramarine-wrasse
+        - /usr/bin/env sh .sqa/script.wheezy-heliotrope-vulture.sh
+        container: qc.doc_scummy-orange-hound
       github.com/demichie/elicipy2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-chartreuse-hippopotamus.sh
-        container: qc.doc_goopy-puce-tarantula
+        - /usr/bin/env sh .sqa/script.clammy-dandelion-bonobo.sh
+        container: qc.doc_scaly-olivine-beetle
   QC.Lic:
     repos:
       github.com/demichie/elicipy2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-mustard-burmese.sh
-        container: qc.lic_flaky-ruby-whale
+        - /usr/bin/env sh .sqa/script.gummy-apricot-woodpecker.sh
+        container: qc.lic_homey-seashell-angora
   QC.Met:
     repos:
       github.com/demichie/elicipy2 cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-crimson-gar.sh
-        container: qc.met_pokey-emerald-malamute
+        - /usr/bin/env sh .sqa/script.sloppy-wheat-donkey.sh
+        container: qc.met_snippy-brown-greyhound
   QC.Sec:
     repos:
       github.com/demichie/elicipy2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-myrtle-schnauzer.sh
-        container: qc.sec_hasty-chocolate-yak
+        - /usr/bin/env sh .sqa/script.scanty-brown-iguana.sh
+        container: qc.sec_tacky-apricot-tarsier
   QC.Sty:
     repos:
       github.com/demichie/elicipy2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-goldenrod-robin.sh
-        container: qc.sty_homely-chestnut-cheetah
+        - /usr/bin/env sh .sqa/script.snappy-aqua-salamander.sh
+        container: qc.sty_snoopy-firebrick-hare
   QC.Uni:
     repos:
       github.com/demichie/elicipy2 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-saffron-hare.sh
-        container: qc.uni_scaly-crimson-indri
+        - /usr/bin/env sh .sqa/script.stealthy-periwinkle-sheepdog.sh
+        container: qc.uni_chummy-ruby-oriole
   QC.Ver:
     repos:
       github.com/demichie/elicipy2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-bronze-magpie.sh
-        container: qc.ver_baggy-malachite-axolotl
+        - /usr/bin/env sh .sqa/script.randy-purple-woodpecker.sh
+        container: qc.ver_stealthy-auburn-bear
 timeout: 5400
